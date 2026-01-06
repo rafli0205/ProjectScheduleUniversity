@@ -1,9 +1,9 @@
 # Schedule University
 
 ## Identitas
-- Nama: Rafli Dhiya Padoli
-- NIM: 312451
-- 
+- Nama: Rafli Dhiya Fadhaly
+- NIM: 312410251
+- Kelas: TI 24 A2
 Aplikasi Android untuk membantu mahasiswa mengatur jadwal kuliah agar lebih mudah, cepat, dan terorganisir.
 
 ## Fitur
