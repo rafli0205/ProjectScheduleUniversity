@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp">
+
+    <CheckBox
+        android:id="@+id/cbTaskSelesai"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingStart="8dp">
+
+        <TextView
+            android:id="@+id/tvTaskTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Judul tugas"
+            android:textStyle="bold"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tvTaskDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Deskripsi tugas"
+            android:textSize="12sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvTaskDeadline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Deadline"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imgTaskAttachment"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:scaleType="centerCrop"
+        android:visibility="gone"
+        android:background="@android:color/darker_gray" />
+
+    <ImageView
+        android:id="@+id/imgDeleteTask"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="8dp"
+        android:src="@android:drawable/ic_menu_delete"
+        android:tint="@color/red_overdue" />
+
+</LinearLayout>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory
+        app:title="Notifikasi Tugas">
+
+        <SwitchPreferenceCompat
+            app:key="pref_notifications_enabled"
+            app:title="Aktifkan notifikasi tugas"
+            app:defaultValue="true" />
+
+        <ListPreference
+            app:key="pref_default_reminder"
+            app:title="Waktu pengingat default"
+            app:entries="@array/reminder_entries"
+            app:entryValues="@array/reminder_values"
+            app:defaultValue="H1"
+            app:useSimpleSummaryProvider="true" />
+
+        <SwitchPreferenceCompat
+            app:key="pref_auto_delete"
+            app:title="Hapus otomatis saat lewat deadline"
+            app:summary="Jika dimatikan, tugas tidak dihapus otomatis oleh alarm"
+            app:defaultValue="true" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

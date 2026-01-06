@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <!-- HEADER UNGU -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/headerEditJadwal"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:background="@color/purple_splash"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Icon Back (teks) -->
+        <TextView
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Back"
+            android:textSize="16sp"
+            android:textColor="@android:color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <!-- Judul -->
+        <TextView
+            android:id="@+id/tvTitleEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edit Jadwal"
+            android:textColor="@color/white"
+            android:textSize="23sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Icon Hapus (pakai teks dulu) -->
+        <TextView
+            android:id="@+id/btnHapus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="🗑"
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- KONTEN SCROLLABLE -->
+    <ScrollView
+        android:id="@+id/scrollEdit"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@id/headerEditJadwal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- PILIH HARI -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardPilihHariEdit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="12dp">
+
+                    <TextView
+                        android:id="@+id/tvHariEdit"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Senin"
+                        android:textSize="18sp"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=">"
+                        android:textSize="18sp"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- TAB JADWAL 1 / 2 / 3 / 4 (HEADER) -->
+            <LinearLayout
+                android:id="@+id/headerTabJadwal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp">
+
+                <TextView
+                    android:id="@+id/tabJadwal1"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Jadwal 1"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:background="@drawable/bg_tab_selected"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/tabJadwal2"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Jadwal 2"
+                    android:textSize="14sp"
+                    android:background="@drawable/bg_tab_unselected"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/tabJadwal3"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Jadwal 3"
+                    android:textSize="14sp"
+                    android:background="@drawable/bg_tab_unselected"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/tabJadwal4"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Jadwal 4"
+                    android:textSize="14sp"
+                    android:background="@drawable/bg_tab_unselected"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <!-- FORM JADWAL -->
+            <LinearLayout
+                android:id="@+id/containerForm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="8dp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:hint="Mata Kuliah">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etMatkulEdit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:hint="Dosen">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etDosenEdit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="8dp">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="Start Time">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etJamMulaiEdit"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:focusable="false"
+                            android:textSize="14sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <View
+                        android:layout_width="8dp"
+                        android:layout_height="match_parent" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="End Time">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etJamSelesaiEdit"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:focusable="false"
+                            android:textSize="14sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:hint="Ruang">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etRuangEdit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <!-- TOMBOL SIMPAN -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSimpanEdit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Simpan"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                android:backgroundTint="@color/purple_splash"
+                android:textColor="@android:color/white" />
+
+            <!-- TOMBOL TAMBAH TUGAS -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/btnTugas"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_gravity="center_horizontal"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="3dp"
+                app:cardUseCompatPadding="true"
+                android:clickable="true"
+                android:foreground="?attr/selectableItemBackgroundBorderless">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="Tambah Tugas"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textColor="@android:color/white"
+                    android:background="@color/purple_splash" />
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Header -->
+    <TextView
+        android:id="@+id/tvHeaderTask"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tugas"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:paddingBottom="8dp" />
+
+    <!-- Filter: Semua / Belum / Selesai -->
+    <LinearLayout
+        android:id="@+id/layoutFilter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="8dp">
+
+        <Button
+            android:id="@+id/btnFilterAll"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Semua" />
+
+        <Button
+            android:id="@+id/btnFilterActive"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Belum" />
+
+        <Button
+            android:id="@+id/btnFilterDone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Selesai" />
+    </LinearLayout>
+
+    <!-- Daftar tugas -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvTasks"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- Tombol tambah -->
+    <Button
+        android:id="@+id/btnTambahTask"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tambah Tugas"
+        android:layout_marginTop="8dp" />
+
+</LinearLayout>

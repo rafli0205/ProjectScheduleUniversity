@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <EditText
+        android:id="@+id/etJudulTask"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Judul tugas" />
+
+    <EditText
+        android:id="@+id/etDeskripsiTask"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Deskripsi (opsional)"
+        android:layout_marginTop="8dp" />
+
+
+    <TextView
+        android:id="@+id/tvDeadlineInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tanggal dan jam di bawah ini adalah DEADLINE tugas (opsional, bisa dikosongkan)."
+        android:textSize="12sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="8dp" />
+
+    <!-- ... komponen tanggal & jam kamu yang sudah ada ... -->
+
+    <TextView
+        android:id="@+id/tvGambarLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Lampirkan gambar / screenshot tugas (opsional)"
+        android:textSize="12sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="12dp" />
+
+    <Button
+        android:id="@+id/btnPilihGambar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pilih Gambar" />
+
+    <ImageView
+        android:id="@+id/imgPreviewTask"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="8dp"
+        android:scaleType="centerCrop"
+        android:visibility="gone"
+        android:background="@android:color/darker_gray" />
+
+    <TextView
+        android:id="@+id/tvTanggalTask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tanggal belum dipilih"
+        android:layout_marginTop="8dp" />
+
+    <Button
+        android:id="@+id/btnPilihTanggal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pilih Tanggal" />
+
+    <TextView
+        android:id="@+id/tvJamTask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jam belum dipilih"
+        android:layout_marginTop="8dp" />
+
+    <Button
+        android:id="@+id/btnPilihJam"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pilih Jam" />
+</LinearLayout>

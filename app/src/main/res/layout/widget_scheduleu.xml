@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widgetRoot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/purple_splash"
+    android:orientation="vertical"
+    android:padding="12dp">
+
+    <TextView
+        android:id="@+id/tvWidgetHari"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Senin"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:id="@+id/tvWidgetMatkul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Matematika"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="4dp" />
+
+    <TextView
+        android:id="@+id/tvWidgetJam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="08.00 - 09.40 • R.301"
+        android:textSize="12sp"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="2dp" />
+
+</LinearLayout>

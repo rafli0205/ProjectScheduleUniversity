@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="reminder_entries">
+        <item>Hanya saat jam deadline</item>
+        <item>H-1 (sehari sebelum)</item>
+        <item>H-2 (dua hari sebelum)</item>
+    </string-array>
+
+    <string-array name="reminder_values">
+        <item>AT_DEADLINE</item>
+        <item>H1</item>
+        <item>H2</item>
+    </string-array>
+</resources>
