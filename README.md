@@ -17,7 +17,7 @@ Aplikasi Android untuk membantu mahasiswa mengatur jadwal kuliah agar lebih muda
 ## Tech Stack
 - Kotlin
 - Android Studio
-- (Tambahkan: Room Database / RecyclerView / Material Design, kalau memang dipakai)
+- Room Database / RecyclerView 
 
 ## Demo
 - YouTube Prototype: https://youtu.be/lMCtCSGz8Aw
